@@ -34,9 +34,10 @@ about-cancer/cancer-symptoms/why-is-early-diagnosis-important), every techonolog
 that could help with the early diagnose is helpfull.""")
 st.title("Dataset")
 st.text("""As mentioned before, this project was feed to a Kaggle's dataset and the 
-data had to be reduced to 15 classes instead of the original 44 (due to limmited 
-resources the training accuracy wouldn't reach much higher values with 44 different 
-classes). Here's a distribution of the 15 classes (No can stands for no cancer detected): """)
+data had to be reduced to 15 classes instead of the original 44 (due 
+to limited resources the training accuracy wouldn't reach much higher 
+values with 44 different classes). Here's a distribution of the 15 
+classes (No can stands for no cancer detected): """)
 st.image(img1)
 st.text("A preview of every class:")
 st.image(img2)
