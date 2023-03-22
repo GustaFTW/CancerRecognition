@@ -1,19 +1,19 @@
 import streamlit as st
-import tensorflow as tf
+# import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 import io
 
 
-@st.cache(allow_output_mutation=True)
-def load_model():
-    model = tf.keras.models.load_model("C:\Projects\Project1\CancerRecognition\SavedModel\mymodel.h5")
-    return model
-model = load_model()
-class_names = ['Astrocitoma', 'Carcinoma', 'Ependimoma', 
-               'Ganglioglioma', 'Germinoma', 'Glioblastoma', 'Granuloma', 
-               'Meduloblastoma', 'Meningioma', 'Neurocitoma', 'No Can', 'Oligodendroglioma', 
-               'Papiloma', 'Schwannoma', 'Tuberculoma']
+# @st.cache(allow_output_mutation=True)
+# def load_model():
+#     model = tf.keras.models.load_model("C:\Projects\Project1\CancerRecognition\SavedModel\mymodel.h5")
+#     return model
+# model = load_model()
+# class_names = ['Astrocitoma', 'Carcinoma', 'Ependimoma', 
+#                'Ganglioglioma', 'Germinoma', 'Glioblastoma', 'Granuloma', 
+#                'Meduloblastoma', 'Meningioma', 'Neurocitoma', 'No Can', 'Oligodendroglioma', 
+#                'Papiloma', 'Schwannoma', 'Tuberculoma']
 img1 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\label_distribution.png")
 img2 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\image_classes.png")
 img3 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\plot_loss_curves.png")
@@ -68,30 +68,30 @@ should not only be encourage as well as needed. Many trivial and everyday proble
 be solved with AI, but it shouldn't stop there, real and complex problem are (and
 will continued to be) solved by AI, this field should be embraced as much as possible
 so it can give astonishing results!""")
-st.title("Try it yourself")
-st.text("""Try uploading a foto of a MRI exam and see what the model will classify it as
-(please notice that for any diagnose a doctor should be notified)""")
-# Use the file uploader to get a file from the user
-file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+# st.title("Try it yourself")
+# st.text("""Try uploading a foto of a MRI exam and see what the model will classify it as
+# (please notice that for any diagnose a doctor should be notified)""")
+# # Use the file uploader to get a file from the user
+# file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 
-def import_and_predict(image_data, model):
-    size = (224, 224)
-    image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
-    img = np.asarray(image)
-    img_reshape = tf.expand_dims(img, axis=0)
-    prediction=model.predict(img_reshape)
-    # return tf.argmax(prediction, axis=1)
-    return class_names[tf.argmax(tf.squeeze(prediction))]
+# def import_and_predict(image_data, model):
+#     size = (224, 224)
+#     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+#     img = np.asarray(image)
+#     img_reshape = tf.expand_dims(img, axis=0)
+#     prediction=model.predict(img_reshape)
+#     # return tf.argmax(prediction, axis=1)
+#     return class_names[tf.argmax(tf.squeeze(prediction))]
 
 
-# If the user uploaded a file, do something with it
-if file is not None:
-    try:
-        # Access the contents of the file as bytes
-        image = Image.open(file)
-        st.image(image, use_column_width=True)
-        predictions = import_and_predict(image, model)
-        st.text(predictions)
-    except Exception as e:
-        st.error("Error: Unable to process the file. Please make sure it is a valid image file.")
+# # If the user uploaded a file, do something with it
+# if file is not None:
+#     try:
+#         # Access the contents of the file as bytes
+#         image = Image.open(file)
+#         st.image(image, use_column_width=True)
+#         predictions = import_and_predict(image, model)
+#         st.text(predictions)
+#     except Exception as e:
+#         st.error("Error: Unable to process the file. Please make sure it is a valid image file.")
