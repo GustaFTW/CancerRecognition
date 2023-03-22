@@ -14,11 +14,11 @@ import io
 #                'Ganglioglioma', 'Germinoma', 'Glioblastoma', 'Granuloma', 
 #                'Meduloblastoma', 'Meningioma', 'Neurocitoma', 'No Can', 'Oligodendroglioma', 
 #                'Papiloma', 'Schwannoma', 'Tuberculoma']
-img1 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\label_distribution.png")
-img2 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\image_classes.png")
-img3 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\plot_loss_curves.png")
-img4 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\confusion_matrix.png")
-img5 = Image.open("C:\Projects\Project1\CancerRecognition\StreamlitApp\pics\classification_report.png")
+img1 = Image.open("StreamlitApp/pics/label_distribution.png")
+img2 = Image.open("StreamlitApp/pics/image_classes.png")
+img3 = Image.open("StreamlitApp/pics/plot_loss_curves.png")
+img4 = Image.open("StreamlitApp/pics/confusion_matrix.png")
+img5 = Image.open("StreamlitApp/pics/classification_report.png")
 
 st.title("Cancer Recognition Project")
 st.text("""This is a project that has the goal of creating an AI that can identify 15 
