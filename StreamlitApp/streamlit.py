@@ -94,10 +94,10 @@ st.image(img5)
 
 st.title("Conclusion")
 st.text("""With the field of AI evolving much as it is every day, the use of AI in 
-several fields should not only be encourage as well as needed. Many trivial and everyday 
-problems can be solved with AI, but it shouldn't stop there, real and complex 
-problem are (and will continued to be) solved by AI, this field should be embraced 
-as much as possible so it can give astonishing results!""")
+several fields should not only be encourage as well as needed. Many trivial and 
+everyday problems can be solved with AI, but it shouldn't stop there, real and 
+complex problem are (and will continued to be) solved by AI, this field should be 
+embraced as much as possible so it can give astonishing results!""")
 # st.title("Try it yourself")
 # st.text("""Try uploading a foto of a MRI exam and see what the model will classify it as
 # (please notice that for any diagnose a doctor should be notified)""")
