@@ -1,8 +1,9 @@
 import streamlit as st
+from PIL import Image
 # import tensorflow as tf
-from PIL import Image, ImageOps
-import numpy as np
-import io
+# from PIL import ImageOps
+# import numpy as np
+# import io
 
 
 # @st.cache(allow_output_mutation=True)
@@ -47,20 +48,8 @@ base model, it was added some regularization layers so that the model wouldn't o
 the model achieved 97% validation accuracy on 13 epochs.""")
 st.title("Evaluating the model")
 st.text("Here are some plots for the evaluation (click to full view): ")
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-   st.header("Loss Curves")
-   st.image(img3)
-
-with col2:
-   st.header("Confusion Matrix")
-   st.image(img4, caption="Some of the class were overlaped due to the limited width and height of the picture")
-
-with col3:
-   st.header("Classification Report")
-   st.image(img5)
+st.title("Plot Loss Curves")
+st.test("")
 
 
 st.title("Conclusion")
