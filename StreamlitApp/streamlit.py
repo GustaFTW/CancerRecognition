@@ -49,7 +49,44 @@ the model achieved 97% validation accuracy on 13 epochs.""")
 st.title("Evaluating the model")
 st.text("Here are some plots for the evaluation (click to full view): ")
 st.title("Plot Loss Curves")
-st.test("")
+st.text("""The loss curve is a plot that shows how the value of the loss function
+changes during training. It is typically plotted against the number of training epochs, 
+which is a measure of how many times the model has seen the training data. The rate 
+of decrease depends on the complexity of the model and the difficulty of the task. 
+It is important to monitor the loss curve during training to detect any issues such as 
+overfitting or underfitting. Overfitting occurs when the model becomes too complex and 
+starts to fit the noise in the training data, resulting in poor performance on unseen 
+data. Underfitting occurs when the model is too simple and is not able to capture the 
+complexity of the underlying relationship between the inputs and outputs. As it can be 
+observed in the plot, the model have its curves very close to each other, and both of 
+them going on the desired direction (up for accuracy and down for loss) both on 
+validation and training curves, so we can conclude that the model is neither overfitting 
+nor underfitting.""")
+st.Image(img3)
+st.title("Confusion Matrix")
+st.text("""A confusion matrix is a table that summarizes the performance of a classification
+model by comparing the predicted and actual class labels for a set of data. It shows the 
+number of true positives, false positives, true negatives, and false negatives (true 
+positives are cases where the model correctly predicts a positive outcome. False positives 
+are cases where the model incorrectly predicts a positive outcome. True negatives are cases 
+where the model correctly predicts a negative outcome. False negatives are cases where the 
+model incorrectly predicts a negative outcome),  which can 
+be used to calculate various performance metrics such as accuracy, precision, recall, and 
+F1 score. The desired confusion is a confusion matrix with values only on the determinant,
+meaning that the model didn't have any false positives or false negatives. Especially when
+working with classifications of diseases, it is very important to try to lower the number of
+false negatives as much as possible, so that the model doesn't fail to detect anything.""")
+st.image(img4)
+st.title("Classification Report")
+st.text("""A classification report is a summary of the performance of a classification model
+on a particular dataset. It typically includes metrics such as precision, recall, accuracy, 
+and F1 score for each class, as well as the overall scores for the model. The report is 
+generated using the predictions made by the model and the actual labels of the dataset. It 
+provides insights into how well the model is performing on each class, and can be used to 
+identify areas where the model is performing well and areas where it may need improvement.
+Looking at the report, the model seems to be performing well on every class, so there's no
+need for a change in any of the parameters.""")
+
 
 
 st.title("Conclusion")
