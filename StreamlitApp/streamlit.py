@@ -89,7 +89,7 @@ well the model is performing on each class, and can be used to identify areas
 where the model is performing well and areas where it may need improvement. 
 Looking at the report, the model seems to be performing well on every class, so 
 there's no need for a change in any of the parameters.""")
-
+st.image(img5)
 
 
 st.title("Conclusion")
